@@ -753,6 +753,7 @@ body {
 
 .team-row {
   flex-wrap: wrap;
+  height: 100%;
 }
 
 .team__item {
@@ -761,11 +762,18 @@ body {
   position: relative;
 }
 
-.team__item:hover .team__about {
+.preview {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all linear 0.5s;
+}
+
+.preview:hover .preview__hover {
   opacity: 1;
 }
 
-.team__item:hover::after {
+.preview:hover::after {
   content: "";
   position: absolute;
   top: 0;
@@ -773,12 +781,6 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(20, 20, 20, 0.7);
-}
-
-.preview {
-  width: 100%;
-  height: 100%;
-  position: relative;
 }
 
 .preview__photo {
@@ -791,21 +793,31 @@ body {
 
 .preview__hover {
   position: absolute;
+  top: 8%;
+  left: 1%;
+  z-index: 10;
+  padding: 0 18%;
+  opacity: 0;
 }
 
-.team__title {
-  margin-bottom: 10px;
-  font-family: "Galagin", Arial, sans-serif;
+.preview__title {
+  margin-bottom: 14px;
+  font-family: 'Gagalin', Arial, sans-serif;
   font-size: 14px;
   line-height: 28px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
-.team__desc {
+.preview__desc {
   margin-bottom: 12px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
+}
+
+.preview__desc--short {
+  padding: 0 10%;
 }
 
 .btn-more {
