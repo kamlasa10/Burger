@@ -1,0 +1,31 @@
+.features {
+  height: 100vh;
+  min-height: 650px;
+  color: #2f3234;
+  background: url("../img/features-bg.jpg")  no-repeat;
+  background-size: cover;
+}
+.features-row {
+  justify-content: space-between;
+  align-items: baseline;
+}
+.big__heading {
+  @include Big-title();
+}
+
+.features-heading {
+  text-align: center;
+}
+.features__item {
+  width: 300px;
+  text-align: center;
+}
+.features__img {
+  margin-bottom: 26px;
+}
+.features__title {
+  margin-bottom: 9px;
+  font-family: $Lifehack-font;
+  font-size: 24px;
+  line-height: 28px;
+}

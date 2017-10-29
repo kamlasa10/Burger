@@ -1,8 +1,11 @@
-@import "_misc/fonts";
+@import "_setting/fonts";
 
-@import "_misc/mixin";
-@import "_misc/variables";
+@import "_setting/mixin";
+@import "_setting/variables";
 
-@import "_misc/normalize";
+@import "_setting/normalize";
+@import "_setting/basic";
 
-@import "style";
+@import "section/first";
+@import "section/features";
+@import "section/team";
