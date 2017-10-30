@@ -45,11 +45,9 @@ body {
   text-decoration: none;
   background-color: #e45028;
   border-radius: 5px;
+  transition: $smoothly;
 
   &:hover {
     background-color: #c1401e;
   }
-}
-.global-p {
-  padding: 68px 0;
 }

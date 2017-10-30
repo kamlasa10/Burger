@@ -18,7 +18,7 @@
   list-style-type: none;
   font-size: 0;
 }
-.site-controls a {
+.site-controls__link {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -26,8 +26,7 @@
   height: 17px;
   border: 1px solid transparent;
   border-radius: 50%;
-}
-.site-controls__item a {
+
   &::before {
     content: "";
     position: absolute;
@@ -43,7 +42,7 @@
     border-color: #ffffff;
   }
 }
-.site-controls__item--current a {
+.site-controls__item--current .site-controls__link {
   border-color: #ffffff;
 }
 .page-header__logo {
@@ -79,7 +78,7 @@
     margin-right: 0;
   }
 }
-.main-navigation a {
+.main-navigation__link {
   font-size: 13px;
   line-height: 30px;
   font-weight: 500;
@@ -122,7 +121,7 @@
   margin-top: 77px;
   padding: 0;
   font-family: $Galagin-font;
-  font-size: 64px;
+  font-size: 72px;
   line-height: 85px;
   text-transform: uppercase;
   color: #f9b43b;

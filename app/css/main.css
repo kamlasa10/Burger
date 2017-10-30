@@ -533,14 +533,11 @@ body {
   text-decoration: none;
   background-color: #e45028;
   border-radius: 5px;
+  transition: all 0.4s;
 }
 
 .btn:hover {
   background-color: #c1401e;
-}
-
-.global-p {
-  padding: 68px 0;
 }
 
 .main {
@@ -566,7 +563,7 @@ body {
   font-size: 0;
 }
 
-.site-controls a {
+.site-controls__link {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -576,7 +573,7 @@ body {
   border-radius: 50%;
 }
 
-.site-controls__item a::before {
+.site-controls__link::before {
   content: "";
   position: absolute;
   top: 4px;
@@ -587,11 +584,11 @@ body {
   border-radius: 50%;
 }
 
-.site-controls__item a:hover {
+.site-controls__link:hover {
   border-color: #ffffff;
 }
 
-.site-controls__item--current a {
+.site-controls__item--current .site-controls__link {
   border-color: #ffffff;
 }
 
@@ -632,7 +629,7 @@ body {
   margin-right: 0;
 }
 
-.main-navigation a {
+.main-navigation__link {
   font-size: 13px;
   line-height: 30px;
   font-weight: 500;
@@ -641,7 +638,7 @@ body {
   text-decoration: none;
 }
 
-.main-navigation a:hover {
+.main-navigation__link:hover {
   text-decoration: underline;
 }
 
@@ -679,8 +676,8 @@ body {
   margin: 0;
   margin-top: 77px;
   padding: 0;
-  font-family: "Galagin", Arial, sans-serif;
-  font-size: 64px;
+  font-family: "Gagalin", Arial, sans-serif;
+  font-size: 72px;
   line-height: 85px;
   text-transform: uppercase;
   color: #f9b43b;
@@ -711,6 +708,8 @@ body {
 }
 
 .features {
+  display: flex;
+  align-items: center;
   height: 100vh;
   min-height: 650px;
   color: #2f3234;
@@ -751,29 +750,22 @@ body {
   line-height: 28px;
 }
 
-.team-row {
+.reviews-row {
   flex-wrap: wrap;
   height: 100%;
 }
 
-.team__item {
+.reviews__item {
   width: 25%;
   height: 50%;
   position: relative;
 }
 
-.preview {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: all linear 0.5s;
-}
-
-.preview:hover .preview__hover {
+.reviews__item:hover .preview__hover {
   opacity: 1;
 }
 
-.preview:hover::after {
+.reviews__item:hover::after {
   content: "";
   position: absolute;
   top: 0;
@@ -798,11 +790,12 @@ body {
   z-index: 10;
   padding: 0 18%;
   opacity: 0;
+  transition: all 0.4s;
 }
 
 .preview__title {
   margin-bottom: 14px;
-  font-family: 'Gagalin', Arial, sans-serif;
+  font-family: "Gagalin", Arial, sans-serif;
   font-size: 14px;
   line-height: 28px;
   font-weight: 400;
@@ -832,6 +825,7 @@ body {
   background-color: #2f3234;
   text-decoration: none;
   border-radius: 5px;
+  transition: all 0.4s;
 }
 
 .btn-more:hover {
