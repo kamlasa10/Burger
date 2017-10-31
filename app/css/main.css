@@ -496,6 +496,7 @@ body {
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
+  font-weight: 300;
   color: #ffffff;
   background-color: #ffffff;
   box-sizing: border-box;
@@ -538,6 +539,13 @@ body {
 
 .btn:hover {
   background-color: #c1401e;
+}
+
+.big__heading {
+  font-family: 'Gagalin', Arial, sans-serif;
+  font-size: 72px;
+  line-height: 64px;
+  text-transform: uppercase;
 }
 
 .main {
@@ -722,16 +730,9 @@ body {
   align-items: baseline;
 }
 
-.big__heading {
-  margin-bottom: 90px;
-  font-family: 'Gagalin', Arial, sans-serif;
-  font-size: 72px;
-  line-height: 64px;
-  text-transform: uppercase;
-}
-
 .features-heading {
   text-align: center;
+  margin-bottom: 70px;
 }
 
 .features__item {
@@ -748,6 +749,107 @@ body {
   font-family: "Lifehack", Arial, sans-serif;
   font-size: 24px;
   line-height: 28px;
+}
+
+.team {
+  position: relative;
+  height: 1000px;
+  background: url(../img/team-bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.team-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 48%;
+  padding: 90px;
+  background-color: #2f3234;
+  opacity: 0.93;
+}
+
+.team__title {
+  color: #f9b43b;
+  margin-bottom: 77px;
+}
+
+.accordeon__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.accordeon__item {
+  position: relative;
+  margin-bottom: 23px;
+  padding-left: 20px;
+  color: #ffffff;
+}
+
+.accordeon__item::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #f9b43b;
+}
+
+.accordeon__item--open::before {
+  display: none;
+}
+
+.accordeon__item--open::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 6px solid #f9b43b;
+}
+
+.accordeon__item--open .accordeon__link {
+  color: #f9b43b;
+}
+
+.accordeon__link {
+  font-family: "Gagalin", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.accordeon__item--open {
+  display: none;
+}
+
+.accordeon-row {
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 28px;
+}
+
+.accordeon__left {
+  margin-right: 18px;
+}
+
+.accordeon__right {
+  margin-top: -5px;
+}
+
+.accordeon__title {
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .reviews-row {
