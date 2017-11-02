@@ -1,0 +1,130 @@
+.delivery {
+  padding: 80px;
+  background: url(../img/delivery-bg.png) no-repeat;
+  background-size: cover;
+}
+.delivery__title {
+  margin-bottom: 79px;
+  text-align: center;
+  color: $orange;
+}
+.delivery-form {
+  margin-left: -6px;
+}
+.delivery-form__title {
+  display: block;
+  margin-bottom: 5px;
+}
+.delivery-row__left {
+  width: 50%;
+  margin-right: 10px;
+}
+.delivery-form__contact {
+  margin-bottom: 12px;
+}
+.layout-row__left {
+  margin-right: 17px;
+}
+.custom-input {
+  width: 224px;
+  padding: 8px 0;
+  border: 1px solid #d1cfcb;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.delivery-form__input--w100 {
+  width: 98%;
+}
+.delivery-form__adress {
+  margin-top: 12px;
+}
+.layout-row__item {
+  margin-right: 17px;
+}
+.delivery-form__input--w25 {
+  width: 103px;
+}
+.delivery-row__right {
+  width: 50%;
+}
+.delivery-form__wishes {
+  margin-bottom: 6px;
+}
+.delivery-form__area {
+  width: 99%;
+  min-height: 109px;
+  resize: none;
+}
+.choise-row__left {
+  margin-right: 15px;
+}
+.delivery-form__choise {
+  margin-bottom: 13px;
+}
+.choise__radio {
+  display: none;
+
+  &:checked ~ .choise__indicator {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: -21px;
+      width: 11px;
+      height: 10px;
+      background-color: #e35028;
+      border-radius: 50%;
+    }
+  }
+}
+.choise__title {
+  position: relative;
+  padding-left: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -2px;
+    width: 17px;
+    height: 17px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+}
+.delivery-form__callback {
+  margin-bottom: 23px;
+}
+.callback__title {
+  position: relative;
+  padding-left: 23px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: -2px;
+    width: 17px;
+    height: 17px;
+    background-color: #ffffff;
+  }
+}
+.callback__checkbox {
+  display: none;
+
+  &:checked ~ .callback__indicator {
+
+  }
+}
+.order__btn {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.btn-reset {
+  background-color: transparent;
+  margin-left: 15px;
+  color: #ffffff;
+}
+

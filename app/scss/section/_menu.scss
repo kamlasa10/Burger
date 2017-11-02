@@ -1,0 +1,86 @@
+
+.menu {
+  position: relative;
+  padding-top: 100px;
+  padding-left: 100px;
+  background: url(../img/menu-bg.jpg) no-repeat;
+  background-size: cover;
+}
+.menu-accordeon__title {
+  position: absolute;
+  top: 50%;
+  padding: 20px 0;
+  font-family: $Galagin-font;
+  font-size: 40px;
+  line-height: 64px;
+  font-weight: 400;
+  transform: rotate(-90deg);
+}
+.menu-accordeon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.menu-accordeon__item {
+  height: 100%;
+}
+.menu-accordeon__item--open .menu-accordeon__right {
+  width: 550px;
+}
+.menu-accordeon__link {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 83px;
+  color: #ffffff;
+  text-decoration: none;
+
+  &--meat {
+    background: url(../img/menu-meat.jpg) 50% no-repeat;
+    background-size: cover;
+  }
+
+  &--vegeterion {
+    background: url(../img/menu-vegeterion.jpg) 50% no-repeat;
+    background-size: cover;
+  }
+
+  &--diet {
+    background: url(../img/menu-Diet.jpg) 50% no-repeat;
+    background-size: cover;
+  }
+}
+.menu-accordeon__text {
+  position: absolute;
+  top: 50%;
+  left: -104%;
+  font-family: $Galagin-font;
+  font-size: 40px;
+  line-height: 64px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+
+  &--correct {
+    left: -129%;
+  }
+}
+.menu-accordeon-row {
+  height: 100%;
+}
+.menu-accordeon__right {
+  width: 0;
+  background-color: rgba(#2f3234, 0.93);
+}
+.menu-accordeon__desc {
+  padding: 63px 35px;
+}
+
+
