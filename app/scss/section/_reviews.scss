@@ -62,10 +62,10 @@
   }
 }
 .preview__title {
-  margin-bottom: 14px;
+  margin-bottom: rem(14px);
   font-family: $Galagin-font;
-  font-size: 14px;
-  line-height: 28px;
+  font-size: rem(14px);
+  line-height: rem(28px);
   font-weight: 400;
   text-transform: uppercase;
 
@@ -74,9 +74,9 @@
   }
 }
 .preview__desc {
-  margin-bottom: 12px;
-  font-size: 14px;
-  line-height: 24px;
+  margin-bottom: rem(12px);
+  font-size: rem(14px);
+  line-height: rem(24px);
   font-weight: 300;
 
   &--short {
@@ -91,15 +91,15 @@
 .btn-more {
   display: inline-block;
   vertical-align: top;
-  padding: 5px 15px;
-  font-size: 13px;
-  line-height: 30px;
+  padding: rem(5px) rem(15px);
+  font-size: rem(13px);
+  line-height: rem(30px);
   font-weight: 500;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #2f3234;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: rem(5px);
   transition: $smoothly;
 
   &:hover {

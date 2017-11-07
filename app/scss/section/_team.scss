@@ -86,7 +86,7 @@
   padding-left: rem(20px);
   font-family: $Galagin-font;
   font-size: rem(14px);
-  line-height: 28px;
+  line-height: rem(28px);
   font-weight: 400;
   text-transform: uppercase;
   color: #ffffff;
@@ -103,7 +103,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 13px;
+    top: rem(13px);
     left: 0;
     width: 0;
     height: 0;
@@ -115,8 +115,8 @@
       content: "";
       position: static;
       display: inline-flex;
-      margin-right: 15px;
-      margin-top: 4px;
+      margin-right: rem(15px);
+      margin-top: rem(4px);
     }
   }
 }
