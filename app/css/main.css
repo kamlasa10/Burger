@@ -876,7 +876,7 @@ body {
 @media screen and (max-width: 480px) {
   .features-heading {
     padding-top: 5rem;
-    font-size: 3.125rem;
+    font-size: 4.0625rem;
     line-height: 3.75rem;
   }
 }
@@ -974,7 +974,8 @@ body {
 
 @media screen and (max-width: 480px) {
   .team__title {
-    font-size: 4.6875rem;
+    margin-left: 2.5rem;
+    font-size: 5rem;
     margin-bottom: 3.125rem;
   }
 }
@@ -1363,7 +1364,7 @@ body {
 @media screen and (max-width: 480px) {
   .delivery__title {
     margin-bottom: 3.125rem;
-    font-size: 4.0625rem;
+    font-size: 4.6875rem;
     line-height: 60px;
     white-space: normal;
   }
