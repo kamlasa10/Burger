@@ -5,6 +5,17 @@
   padding-left: 100px;
   background: url(../img/menu-bg.jpg) no-repeat;
   background-size: cover;
+
+  @include phones {
+    padding-left: rem(5px);
+    padding-right: rem(5px);
+  }
+}
+.menu__title {
+  @include phones {
+    font-size: rem(35px);
+    line-height: rem(60px);
+  }
 }
 .menu-accordeon__title {
   position: absolute;
@@ -25,12 +36,18 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include phones {
+    right: rem(-20px);
+  }
 }
 .menu-accordeon__item {
   height: 100%;
 }
 .menu-accordeon__item--open .menu-accordeon__right {
   width: 550px;
+  padding: 63px 35px;
+  opacity: 1;
 }
 .menu-accordeon__link {
   position: relative;
@@ -77,10 +94,11 @@
 }
 .menu-accordeon__right {
   width: 0;
+  opacity: 0;
   background-color: rgba(#2f3234, 0.93);
 }
 .menu-accordeon__desc {
-  padding: 63px 35px;
+
 }
 
 

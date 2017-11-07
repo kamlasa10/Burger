@@ -1,31 +1,72 @@
 .features {
   display: flex;
   align-items: center;
-  height: 100vh;
-  min-height: 650px;
   color: #2f3234;
   background: url("../img/features-bg.jpg")  no-repeat;
   background-size: cover;
+
+  @include phones {
+    background-position: 50% 50%;
+  }
 }
 .features-row {
   justify-content: space-between;
   align-items: baseline;
-}
 
+  @include phones {
+    flex-direction: column;
+  }
+}
 .features-heading {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: rem(70px);
+
+  @include tablets {
+    margin-bottom: rem(40px);
+    white-space: nowrap;
+  }
+
+  @include phones {
+    padding-top: rem(80px);
+    font-size: rem(50px);
+    line-height: rem(60px);
+  }
 }
 .features__item {
-  width: 300px;
+  width: 33%;
   text-align: center;
+
+  @include phones {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: rem(18px);
+    text-align: left;
+  }
+
+}
+.features__pic {
+
+  @include phones {
+    margin-right: rem(15px);
+  }
+
+  &--correct {
+    margin-right: 10px;
+  }
 }
 .features__img {
-  margin-bottom: 26px;
+  margin-bottom: rem(26px);
 }
 .features__title {
-  margin-bottom: 9px;
+  margin-bottom: rem(9px);
   font-family: $Lifehack-font;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: rem(24px);
+  line-height: rem(28px);
+
+  @include phones {
+    font-size: 20px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
 }

@@ -2,6 +2,17 @@
 *,*::after {
   box-sizing: inherit;
 }
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: 15px;
+  }
+
+  @include phones {
+    font-size: 12px;
+  }
+}
 html,
 body {
   height: 100%;
@@ -10,8 +21,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: rem(14px);
+  line-height: rem(24px);
   font-weight: 300;
   color: #ffffff;
   background-color: #ffffff;
@@ -21,7 +32,8 @@ body {
 }
 .container {
   position: relative;
-  width: 960px;
+  width: 100%;
+  max-width: 940px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -30,22 +42,22 @@ body {
 }
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 .btn {
   display: inline-block;
   vertical-align: top;
-  width: 96px;
+  width: rem(96px);
   padding: 3px 0;
-  font-size: 13px;
-  line-height: 30px;
+  font-size: rem(13px);
+  line-height: rem(30px);
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
   background-color: #e45028;
-  border-radius: 5px;
+  border-radius: rem(5px);
   transition: $smoothly;
 
   &:hover {

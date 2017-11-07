@@ -7,6 +7,21 @@
   height: 50%;
   position: relative;
 
+  @include tablets {
+    width: 50%;
+    height: 25%;
+    text-align: center;
+
+    &:hover::after {
+      position: static;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: transparent;
+    }
+  }
+
   &:hover .preview__hover {
     opacity: 1;
   }
@@ -19,6 +34,10 @@
     right: 0;
     bottom: 0;
     background-color: rgba(20,20,20,0.7);
+
+    @include tablets {
+      display: none;
+    }
   }
 }
 
@@ -37,6 +56,10 @@
   padding: 0 18%;
   opacity: 0;
   transition: $smoothly;
+
+  @include phones {
+    display: none;
+  }
 }
 .preview__title {
   margin-bottom: 14px;
@@ -45,6 +68,10 @@
   line-height: 28px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @include tablets {
+    margin-bottom: 0;
+  }
 }
 .preview__desc {
   margin-bottom: 12px;
@@ -54,6 +81,10 @@
 
   &--short {
     padding: 0 10%;
+  }
+
+  @include tablets {
+    margin-bottom: rem(5px);
   }
 }
 

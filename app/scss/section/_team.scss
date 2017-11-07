@@ -1,6 +1,5 @@
 .team {
   position: relative;
-  height: 1000px;
   background: url(../img/team-bg.jpg) no-repeat;
   background-size: cover;
 }
@@ -11,13 +10,38 @@
   right: 0;
   height: 100%;
   width: 48%;
-  padding: 90px;
+  padding: rem(90px);
   background-color: rgba(#2f3234,0.93);
 
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    padding-left: rem(10px);
+  }
+
+}
+.accordeon {
+
+  @include tablets {
+    text-align: center;
+    margin-left: 22px;
+  }
 }
 .team__title {
   color: #f9b43b;
-  margin-bottom: 77px;
+  margin-bottom: rem(77px);
+
+  @include tablets {
+    margin-left: rem(55px);
+    margin-bottom: rem(74px);
+  }
+
+  @include phones {
+    font-size: rem(75px);
+    margin-bottom: rem(50px);
+  }
 }
 .accordeon__list {
   margin: 0;
@@ -26,8 +50,16 @@
 }
 .accordeon__item {
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: rem(23px);
   color: #ffffff;
+
+  @include tablets {
+    margin-bottom: rem(33px);
+  }
+
+  @include phones {
+    margin-bottom: rem(15px);
+  }
 }
 
 .accordeon__item--open {
@@ -42,19 +74,30 @@
       transform: rotate(-180deg);
     }
   }
+  .accordeon-row {
+    display: block;
+  }
 
 }
 .accordeon__link {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 20px;
+  display: inline-flex;
+  align-items: center;
+  padding-left: rem(20px);
   font-family: $Galagin-font;
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 28px;
   font-weight: 400;
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
+
+  @include tablets {
+    font-size: rem(25px);
+  }
+
+  @include phones {
+    white-space: nowrap;
+  }
 
   &::before {
     content: "";
@@ -63,24 +106,42 @@
     left: 0;
     width: 0;
     height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid #f9b43b;
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-top: rem(6px) solid #f9b43b;
+
+    @include tablets {
+      content: "";
+      position: static;
+      display: inline-flex;
+      margin-right: 15px;
+      margin-top: 4px;
+    }
   }
 }
-
 .accordeon-row {
   display: none;
-  margin-top: 10px;
-  margin-bottom: 28px;
+  margin-top: rem(10px);
+  margin-bottom: rem(28px);
+
+  @include tablets {
+    flex-direction: column;
+    margin-top: rem(14px);
+    margin-left: rem(25px);
+    margin-bottom: rem(40px);
+  }
 }
 .accordeon__left {
-  margin-right: 18px;
+  margin-right: rem(18px);
+
+  @include tablets {
+    margin-bottom: rem(14px);
+  }
 }
 .accordeon__right {
-  margin-top: -5px;
+  margin-top: rem(-5px);
 }
 .accordeon__title {
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
   font-weight: bold;
 }

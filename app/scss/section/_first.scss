@@ -1,6 +1,11 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+}
 .main {
   height: 100vh;
-  min-height: 650px;
   padding-top: 12px;
   background: #000000 url("../img/main-bg.jpg") no-repeat;
   background-size: cover;
@@ -11,8 +16,8 @@
 }
 .site-controls  {
   position: fixed;
-  top: 91px;
-  right: 153px;
+  top: 10%;
+  right: 10%;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -22,24 +27,28 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  width: 17px;
-  height: 17px;
+  width: rem(17px);
+  height: rem(17px);
   border: 1px solid transparent;
   border-radius: 50%;
 
   &::before {
     content: "";
     position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 6px;
-    height: 6px;
+    top: rem(4px);
+    left: rem(4px);
+    width: rem(6px);
+    height: rem(6px);
     background-color: #ffffff;
     border-radius: 50%;
   }
 
   &:hover {
     border-color: #ffffff;
+  }
+
+  @include tablets {
+    display: none;
   }
 }
 .site-controls__item--current .site-controls__link {
@@ -50,7 +59,11 @@
 }
 .main-navigation {
   display: flex;
-  margin-top: -10px;
+  margin-top: rem(-10px);
+
+  @include tablets {
+    display: none;
+  }
 }
 .main-navigation__list {
   display: flex;
@@ -60,16 +73,16 @@
 }
 .main-navigation__item {
   position: relative;
-  padding-right: 18px;
-  margin-right: 16px;
+  padding-right: rem(18px);
+  margin-right: rem(16px);
 
   &:not(:last-child)::after {
     content: "";
     position: absolute;
-    top: 13px;
-    right: -2px;
-    width: 4px;
-    height: 4px;
+    top: rem(13px);
+    right: rem(-2px);
+    width: rem(4px);
+    height: rem(4px);
     background-color: #ffffff;
     border-radius: 50%;
   }
@@ -79,8 +92,8 @@
   }
 }
 .main-navigation__link {
-  font-size: 13px;
-  line-height: 30px;
+  font-size: rem(13px);
+  line-height: rem(30px);
   font-weight: 500;
   text-transform: uppercase;
   color: #ffffff;
@@ -90,54 +103,123 @@
     text-decoration: underline;
   }
 }
+
 .order {
-  margin-top: -8px;
+  margin-top: rem(-8px);
+}
+.burger-menu-link {
+  position: relative;
+  display: none;
+  margin-left: rem(50px);
+
+  @include tablets {
+    display: inline-block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(-5px);
+      left: rem(-35px);
+      width: rem(24px);
+      height: rem(22px);
+      vertical-align: top;
+      background: url(../../img/burger-menu.png) no-repeat;
+    }
+  }
 }
 .promo {
-  margin-top: -15px;
-  padding-left: 61px;
-  padding-right: 59px;
+  margin-top: rem(-15px);
+  padding-left: rem(61px);
+  padding-right: rem(59px);
+
+  @include phones {
+    padding-left: rem(7px);
+    padding-right: rem(7px);
+  }
 }
 .promo-row {
   align-items: center;
-  margin-bottom: 89px;
-}
+  margin-bottom: rem(89px);
 
+  @include tablets {
+    flex-direction: column;
+    margin-bottom: rem(12px);
+  }
+}
+.promo__left, .promo__right {
+  width: 50%;
+
+  @include tablets {
+    width: 100%;
+    text-align: center;
+  }
+}
+.promo__right {
+  @include phones {
+    margin-left: rem(12px);
+  }
+}
 .promo__left {
-  margin-left: 65px;
-  margin-right: 8px;
+  margin-left: rem(65px);
+  margin-right: rem(8px);
+
+  @include phones {
+    margin-right: rem(75px);
+
+  }
 }
 
 .promo-img  {
   position: relative;
-}
-.promo-img svg {
-  position: absolute;
-  top: 67px;
-  right: 2px;
+
+  img {
+    max-width: 100%;
+  }
 }
 .promo__title {
   margin: 0;
-  margin-top: 77px;
+  margin-top: rem(77px);
   padding: 0;
   font-family: $Galagin-font;
-  font-size: 72px;
-  line-height: 85px;
+  font-size: rem(72px);
+  line-height: rem(85px);
   text-transform: uppercase;
   color: #f9b43b;
+
+  @include tablets {
+    margin-top: rem(16px);
+  }
+
+  @include phones {
+    white-space: nowrap;
+    font-size: rem(60px);
+    font-weight: 400;
+    line-height: rem(60px);
+  }
 }
+
 .promo__desc {
-  margin-top: 6px;
+  margin-top: rem(6px);
   font-family: $Lifehack-font;
-  font-size: 65px;
-  line-height: 73px;
+  font-size: rem(65px);
+  line-height: rem(73px);
   font-weight: 500;
   text-transform: lowercase;
+
+  @include tablets {
+    margin-top: rem(23px);
+  }
+
+  @include phones {
+    font-size: rem(54px);
+    font-weight: 500;
+    line-height: rem(60px);
+  }
 }
 .btn__down {
   display: flex;
   justify-content: center;
-  margin-left: 12px;
+  margin-left: rem(12px);
   align-items: center;
 }
 .down__icon {

@@ -1,130 +1,214 @@
 .delivery {
-  padding: 80px;
+  padding: rem(80px);
   background: url(../img/delivery-bg.png) no-repeat;
   background-size: cover;
+
+  @include tablets {
+    padding-left: 45px;
+  }
+
+  @include phones {
+    padding: 0;
+    padding-top: rem(80px);
+  }
 }
 .delivery__title {
-  margin-bottom: 79px;
+  margin-bottom: rem(79px);
   text-align: center;
+  white-space: nowrap;
   color: $orange;
+
+  @include phones {
+    margin-bottom: rem(50px);
+    font-size: rem(65px);
+    line-height: 60px;
+    white-space: normal;
+  }
+}
+.delivery-row {
+
+  @include  tablets {
+    flex-direction: column;
+    margin-left: 14%;
+  }
+
+  @include phones {
+    margin-left: 0;
+  }
 }
 .delivery-form {
-  margin-left: -6px;
+  margin-left: rem(-6px);
 }
 .delivery-form__title {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
 }
-.delivery-row__left {
+.delivery-row__left,
+.delivery-row__right {
   width: 50%;
-  margin-right: 10px;
+  margin-right: rem(26px);
+
+  @include tablets {
+    width: 85%;
+    margin-right: 0;
+  }
+
+  @include phones {
+    width: 104%;
+  }
 }
 .delivery-form__contact {
-  margin-bottom: 12px;
+  margin-bottom: rem(12px);
 }
 .layout-row__left {
-  margin-right: 17px;
+  margin-right: rem(17px);
+
+  @include phones {
+    margin-right: rem(1px);
+  }
+}
+.layout-row__left,
+.layout-row__right {
+  @include phones {
+    width: 100%;
+  }
+}
+
+.layout-row__left {
+  margin-right: rem(5px);
 }
 .custom-input {
-  width: 224px;
-  padding: 8px 0;
+  width: rem(224px);
+  padding: rem(8px) 0;
   border: 1px solid #d1cfcb;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: rem(5px);
+
+  @include phones {
+    width: rem(188px);
+  }
 }
 .delivery-form__input--w100 {
   width: 98%;
 }
 .delivery-form__adress {
-  margin-top: 12px;
+  margin-top: rem(12px);
 }
 .layout-row__item {
-  margin-right: 17px;
+  margin-right: rem(17px);
+
+  @include phones {
+    &:last-child {
+      display: none;
+    }
+  }
 }
 .delivery-form__input--w25 {
-  width: 103px;
+  width: rem(103px);
+
+  @include phones {
+    width: rem(120px);
+  }
 }
-.delivery-row__right {
-  width: 50%;
-}
+
 .delivery-form__wishes {
-  margin-bottom: 6px;
+  margin-bottom: rem(6px);
 }
 .delivery-form__area {
   width: 99%;
-  min-height: 109px;
+  min-height: rem(109px);
   resize: none;
 }
 .choise-row__left {
-  margin-right: 15px;
+  margin-right: rem(15px);
 }
 .delivery-form__choise {
-  margin-bottom: 13px;
+  margin-bottom: rem(13px);
 }
 .choise__radio {
   display: none;
 
-  &:checked ~ .choise__indicator {
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 4px;
-      left: -21px;
-      width: 11px;
-      height: 10px;
-      background-color: #e35028;
-      border-radius: 50%;
-    }
+  &:checked + .choise__title::after {
+    opacity: 1;
   }
 }
 .choise__title {
   position: relative;
-  padding-left: 22px;
+  padding-left: rem(22px);
+  transition: $smoothly;
 
   &::before {
     content: "";
     position: absolute;
-    top: 4px;
-    left: -2px;
-    width: 17px;
-    height: 17px;
+    top: rem(1px);
+    left: rem(-2px);
+    width: rem(16px);
+    height: rem(16px);
     background-color: #ffffff;
     border-radius: 50%;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: rem(6px);
+    left: rem(3px);
+    width: rem(6px);
+    height: rem(6px);
+    background-color: #e35028;
+    border-radius: 50%;
+    opacity: 0;
+    transition: $smoothly;
+  }
 }
 .delivery-form__callback {
-  margin-bottom: 23px;
+  margin-bottom: rem(23px);
 }
 .callback__title {
   position: relative;
-  padding-left: 23px;
+  padding-left: rem(23px);
+  transition: $smoothly;
 
   &::before {
     content: "";
     position: absolute;
-    top: 3px;
-    left: -2px;
-    width: 17px;
-    height: 17px;
+    top: rem(3px);
+    left: rem(-2px);
+    width: rem(17px);
+    height: rem(17px);
     background-color: #ffffff;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: rem(6px);
+    left: rem(1px);
+    background: url(../../img/check.png) no-repeat;
+    background-size: cover;
+    width: 11px;
+    height: 9px;
+    opacity: 0;
+    transition: $smoothly;
   }
 }
 .callback__checkbox {
   display: none;
 
-  &:checked ~ .callback__indicator {
-
+  &:checked + .callback__title::after {
+    opacity: 1;
   }
 }
 .order__btn {
+  padding: 15px 0;
   border: none;
+  line-height: 1;
   cursor: pointer;
   outline: none;
 }
 .btn-reset {
   background-color: transparent;
-  margin-left: 15px;
+  margin-left: rem(15px);
   color: #ffffff;
 }
 

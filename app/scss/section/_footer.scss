@@ -9,9 +9,17 @@
 .footer-row {
   justify-content: space-between;
   align-items: center;
+
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+  }
 }
-.footer__left {
+.footer__left, .footer__right {
   width: 50%;
+}
+.footer__adress {
+  white-space: nowrap;
 }
 .footer__tel {
   position: relative;
@@ -22,6 +30,10 @@
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+
+  @include phones {
+    margin-bottom: 14px;
+  }
 }
 .tel-icon {
   position: absolute;
@@ -35,7 +47,6 @@
   }
 }
 .footer__right {
-  width: 50%;
   text-align: right;
 }
 .social__list {
@@ -45,13 +56,18 @@
   margin-left: 20px;
   left: 0;
   list-style-type: none;
+
+  @include phones {
+    justify-content: center;
+    margin-left: -23px;
+  }
 }
 .social__link {
   display: inline-block;
   vertical-align: top;
-  margin-right: 20px;
-  width: 20px;
-  height: 20px;
+  margin-right: rem(20px);
+  width: rem(20px);
+  height: rem(20px);
   background-color: transparent;
 }
 .social__icon {
@@ -66,18 +82,18 @@
   }
 }
 .social__icon--vk svg {
-  width: 23px;
-  height: 13px;
+  width: rem(23px);
+  height: rem(13px);
 }
 .social__icon--fb svg {
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
 }
 .social__icon--inst svg {
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
 }
 .social__icon--tw svg {
-  width: 20px;
-  height: 16px;
+  width: rem(20px);
+  height: rem(16px);
 }
