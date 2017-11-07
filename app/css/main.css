@@ -1350,7 +1350,8 @@ body {
 @media screen and (max-width: 480px) {
   .delivery {
     padding: 0;
-    padding-top: 5rem;
+    padding-top: 2.1875rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -1363,7 +1364,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .delivery__title {
-    margin-bottom: 3.125rem;
+    margin-bottom: 2.1875rem;
     font-size: 4.6875rem;
     line-height: 60px;
     white-space: normal;

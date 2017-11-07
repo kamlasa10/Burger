@@ -9,7 +9,8 @@
 
   @include phones {
     padding: 0;
-    padding-top: rem(80px);
+    padding-top: rem(35px);
+    padding-bottom: rem(80px);
   }
 }
 .delivery__title {
@@ -19,7 +20,7 @@
   color: $orange;
 
   @include phones {
-    margin-bottom: rem(50px);
+    margin-bottom: rem(35px);
     font-size: rem(75px);
     line-height: 60px;
     white-space: normal;
