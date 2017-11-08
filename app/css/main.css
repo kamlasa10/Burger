@@ -828,6 +828,12 @@ body {
   align-items: center;
 }
 
+.down__arrow {
+  fill: #ffffff;
+  width: 29px;
+  height: 14px;
+}
+
 .down__icon:hover {
   opacity: 0.6;
 }
@@ -908,6 +914,24 @@ body {
 
 .features__img {
   margin-bottom: 1.625rem;
+}
+
+.features__meat-icon {
+  fill: #e25028;
+  width: 97px;
+  height: 89px;
+}
+
+.features__hand-icon {
+  fill: #f8b43a;
+  width: 73px;
+  height: 85px;
+}
+
+.features__natural-icon {
+  fill: #8ac03e;
+  width: 88px;
+  height: 75px;
 }
 
 .features__title {

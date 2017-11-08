@@ -222,6 +222,11 @@
   margin-left: rem(12px);
   align-items: center;
 }
+.down__arrow {
+  fill: #ffffff;
+  width: 29px;
+  height: 14px;
+}
 .down__icon {
   &:hover {
     opacity: 0.6;
