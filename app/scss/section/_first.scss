@@ -159,19 +159,20 @@
     transform: rotate(130deg);
     display: block;
     z-index: 100;
-    width: 25px;
+    width: rem(25px);
     opacity: 0.7;
+    transition: $smoothly;
 
     &::after {
-      width: 25px;
-      bottom: -1px;
+      width: rem(25px);
+      bottom: rem(-1px);
       right: 0;
       transform: rotate(-82deg);
     }
   }
 
   @include phones {
-    top: 3px;
+    top: rem(3px);
     margin-left: rem(30px);
   }
 
@@ -304,6 +305,16 @@
   display: block;
 }
 
+@keyframes burger-open {
+  0% {
+    top: - 2000px;
+  }
+
+  100% {
+    top: 23%;
+  }
+}
+
 .burger-menu {
   @include tablets {
     display: flex;
@@ -315,10 +326,12 @@
     padding: 0;
     list-style-type: none;
     z-index: 100;
+    animation-name: burger-open;
+    animation-duration: 0.5s;
   }
 }
 .burger-menu__item {
-  width: 80px;
+  width: rem(80px);
   position: relative;
   padding-bottom: rem(26px);
   margin-bottom: rem(23px);
@@ -326,8 +339,8 @@
   &:not(:last-child)::after {
     content: "";
     position: absolute;
-    top: 60px;
-    right: 45px;
+    top: rem(60px);
+    right: rem(45px);
     width: rem(6px);
     height: rem(6px);
     background-color: #ffffff;
@@ -340,10 +353,10 @@
 }
 .burger-menu__item--correct {
   position: relative;
-  left: -30px;
+  left: rem(-30px);
 
   &:not(:last-child)::after {
-    right: 13px;
+    right: rem(13px);
   }
 }
 .burger-menu__link {

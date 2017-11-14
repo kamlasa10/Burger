@@ -744,20 +744,21 @@ body {
   transform: rotate(130deg);
   display: block;
   z-index: 100;
-  width: 25px;
+  width: 1.5625rem;
   opacity: 0.7;
+  transition: all 0.4s;
 }
 
 .burger-menu-btn--active::after {
-  width: 25px;
-  bottom: -1px;
+  width: 1.5625rem;
+  bottom: -0.0625rem;
   right: 0;
   transform: rotate(-82deg);
 }
 
 @media screen and (max-width: 480px) {
   .burger-menu-btn {
-    top: 3px;
+    top: 0.1875rem;
     margin-left: 1.875rem;
   }
 }
@@ -910,6 +911,15 @@ body {
   display: block;
 }
 
+@keyframes burger-open {
+  0% {
+    top: -2000px;
+  }
+  100% {
+    top: 23%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .burger-menu {
     display: flex;
@@ -921,11 +931,13 @@ body {
     padding: 0;
     list-style-type: none;
     z-index: 100;
+    animation-name: burger-open;
+    animation-duration: 0.5s;
   }
 }
 
 .burger-menu__item {
-  width: 80px;
+  width: 5rem;
   position: relative;
   padding-bottom: 1.625rem;
   margin-bottom: 1.4375rem;
@@ -934,8 +946,8 @@ body {
 .burger-menu__item:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 60px;
-  right: 45px;
+  top: 3.75rem;
+  right: 2.8125rem;
   width: 0.375rem;
   height: 0.375rem;
   background-color: #ffffff;
@@ -950,11 +962,11 @@ body {
 
 .burger-menu__item--correct {
   position: relative;
-  left: -30px;
+  left: -1.875rem;
 }
 
 .burger-menu__item--correct:not(:last-child)::after {
-  right: 13px;
+  right: 0.8125rem;
 }
 
 .burger-menu__link {
