@@ -1,0 +1,383 @@
+.slider {
+  display: flex;
+  align-items: center;
+  background-color: #f9b43b;
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+
+  @include phones {
+    padding-top: rem(75px);
+  }
+}
+.slide-row {
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.slide__left,
+.slide__right{
+  width: 50%;
+
+  @include tablets {
+    width: 100%;
+  }
+}
+.slide__left {
+  position: relative;
+  margin-right: rem(54px);
+}
+.slide__img-pic {
+
+  @include tablets {
+    max-width: 100%;
+  }
+
+  @include phones {
+    max-height: 260px;
+  }
+}
+.slide__structure {
+  ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 65px;
+    width: 300px;
+    height: 350px;
+    background-color: transparent;
+  }
+  &:hover  .structure__right {
+    display: block;
+  }
+
+}
+.structure__left {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: rem(-74px);
+  left: rem(34px);
+  width: rem(90px);
+  padding: rem(6px) 0;
+  padding-top: rem(11px);
+  background-color: rgba(#e35028, 0.4);
+  border-radius: rem(6px);
+  cursor: pointer;
+
+
+  @include tablets {
+    top: rem(-80px);
+    left: rem(130px);
+  }
+
+  @include phones {
+    top: rem(-65px);
+    left: rem(5px);
+  }
+}
+.structure__title {
+  font-family: $Galagin-font;
+}
+.structure__icon svg {
+  fill: #ffffff;
+  width: rem(44px);
+  height: rem(46px);
+}
+.structure__right {
+  position: absolute;
+  top: rem(-74px);
+  left: rem(123px);
+  display: none;
+
+
+  @include tablets {
+    top: rem(-80px);
+    left: rem(220px);
+  }
+
+  @include phones {
+    top: -50px;
+    left: 70px;
+  }
+}
+.structure__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: rem(270px);
+  margin: 0;
+  padding: rem(20px);
+  list-style-type: none;
+  background-color: rgba(#ffffff, 0.9);
+  border-radius: rem(5px);
+  z-index: 10;
+
+  @include tablets {
+    width: rem(322px);
+    padding-right: rem(80px);
+  }
+
+  @include phones {
+    width: 200px;
+    padding-right: rem(65px);
+  }
+}
+.structure__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: #2f3234;
+}
+.structure__desc {
+  margin-left: rem(-15px);
+}
+.structure__icon-pic--beef svg {
+  width: rem(44px);
+  height: rem(39px);
+  fill: #e25028;
+}
+.structure__icon-pic--buns svg {
+  width: rem(48px);
+  height: rem(30px);
+  fill: #f8b43a;
+}
+.structure__icon-pic--salad svg {
+  width: rem(38px);
+  height: rem(38px);
+  fill: #8bc040;
+}
+.structure__icon-pic--sauce svg {
+  width: 41px;
+  height: 43px;
+  fill: #e25028;
+}
+.structure__icon-pic--cucumber svg {
+  width: 43px;
+  height: 37px;
+  fill: #8bc040;
+}
+.structure__icon-pic--cheese svg {
+  width: 39px;
+  height: 34px;
+  fill: #f8b43a;
+}
+.structure__desc {
+  font-weight: 500;
+
+  @include tablets {
+    margin-left: rem(-60px);
+  }
+
+  @include phones {
+    margin-left: rem(-15px);
+  }
+}
+.structure__btn-close {
+  @include tablets {
+    position: absolute;
+    top: rem(35px);
+    right: rem(35px);
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: $smoothly;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+
+    &::before ,
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: rgba(#e35028, 0.7);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+  }
+.calories {
+  position: absolute;
+  bottom: rem(-80px);
+  left: rem(32px);
+  color: rgba(#ffffff, 0.4);
+
+  @include tablets {
+    top: -20%;
+    right: -53%;
+  }
+}
+.calories__img {
+  position: relative;
+}
+.calories__icon svg {
+  width: rem(60px);
+  height: rem(60px);
+  fill: rgba(#ffffff, 0.5);
+}
+.calories__text {
+  position: absolute;
+  top: rem(26px);
+  left: rem(12px);
+  font-size: rem(16px);
+  line-height: rem(20px);
+  font-weight: bold;
+
+  @include tablets {
+    right: 1%;
+  }
+}
+.calories__title {
+  margin-left: rem(15px);
+  font-family: $Galagin-font;
+  line-height: 24px;
+  font-weight: 400;
+
+  @include tablets {
+    margin-left: 0;
+  }
+
+  @include phones {
+    font-size: rem(18px);
+  }
+}
+.slide__title {
+  margin-top: rem(-81px);
+  margin-bottom: rem(41px);
+
+  @include tablets {
+    margin-top: rem(15px);
+  }
+
+  @include phones {
+    margin-top: rem(-5px);
+    margin-bottom: 10px;
+    font-size: rem(40px);
+    line-height: rem(45px);
+    font-weight: 400;
+  }
+}
+.slide__desc {
+  margin-bottom: rem(21px);
+
+  @include tablets {
+    padding: 0 15%;
+  }
+
+  @include phones {
+    margin-bottom: rem(30px);
+    padding: 0;
+  }
+}
+.slide-layout-row {
+  align-items: center;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+.slide__price {
+  margin-right: rem(27px);
+  position: relative;
+  color: #e35028;
+}
+.slide__price {
+  font-size: rem(50px);
+  line-height: rem(60px);
+}
+.price__text {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: rem(-23px);
+  font-size: rem(30px);
+  line-height: 1;
+  font-weight: 400;
+
+  @include tablets {
+    margin-left: rem(-9px);
+  }
+
+  @include phones {
+    font-size: rem(25px);
+    line-height: rem(30px);
+    margin-left: rem(-13px);
+  }
+}
+.slide-order {
+  margin-top: rem(45px);
+
+  @include tablets {
+    margin-top: rem(18px);
+  }
+}
+.slider-controls {
+  position: relative;
+}
+.slider-btn-prev {
+  left: 0;
+  transform: rotate(90deg);
+
+  @include tablets {
+    left: 10%;
+  }
+
+  @include phones {
+    left: -3%;
+  }
+}
+.slider-btn {
+  position: absolute;
+  top: 47%;
+  border: none;
+  font-size: 0;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: $smoothly;
+  z-index: 15;
+
+  @include tablets {
+    top: 40%;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  svg {
+    fill: #ffffff;
+    width: 27px;
+    height: 13px;
+  }
+}
+.slider-btn-next {
+  right: -10%;
+  transform: rotate(-90deg);
+
+  @include tablets {
+    right: 10%;
+  }
+
+  @include phones {
+    right: -3%;
+  }
+}

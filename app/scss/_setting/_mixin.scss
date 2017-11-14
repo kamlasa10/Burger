@@ -1,11 +1,12 @@
-@mixin Big-title {
+@mixin Big-title() {
   font-family: 'Gagalin', Arial, sans-serif;
   font-size: 72px;
   line-height: 64px;
   text-transform: uppercase;
 }
-@function rem($px) {
-  @return $px / 16px + 0rem;
+
+@function rem($p) {
+  @return $p / 16px+0rem;
 }
 
 @mixin tablets {
@@ -18,4 +19,5 @@
     @content;
   }
 }
+
 

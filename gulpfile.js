@@ -13,7 +13,7 @@ gulp.task('serve', ['sass'], function() {
 });
 
 gulp.task('sass', function() {
-  return gulp.src("app/scss/**/*.scss")
+  return gulp.src("app/scss/main.scss")
       .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
       .pipe(gulp.dest("app/css"))
       .pipe(browserSync.stream());
