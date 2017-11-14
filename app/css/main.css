@@ -743,7 +743,7 @@ body {
   right: -0.9375rem;
   transform: rotate(130deg);
   display: block;
-  z-index: 10;
+  z-index: 100;
   width: 25px;
   opacity: 0.7;
 }
@@ -903,6 +903,7 @@ body {
   left: 0;
   background-color: rgba(47, 50, 52, 0.98);
   z-index: 90;
+  display: none;
 }
 
 .overlay-show {
