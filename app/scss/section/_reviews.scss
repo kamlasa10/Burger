@@ -50,7 +50,7 @@
 }
 .preview__hover {
   position: absolute;
-  top: 8%;
+  top: 6%;
   left: 1%;
   z-index: 10;
   padding: 0 18%;
@@ -58,11 +58,12 @@
   transition: $smoothly;
 
   @include phones {
-    display: none;
+    top: 1%;
+    padding: 0 3%;
   }
 }
 .preview__title {
-  margin-bottom: rem(14px);
+  margin-bottom: rem(3px);
   font-family: $Galagin-font;
   font-size: rem(14px);
   line-height: rem(28px);
@@ -74,7 +75,7 @@
   }
 }
 .preview__desc {
-  margin-bottom: rem(12px);
+  margin-bottom: rem(8px);
   font-size: rem(14px);
   line-height: rem(24px);
   font-weight: 300;
@@ -86,6 +87,11 @@
   @include tablets {
     margin-bottom: rem(5px);
   }
+
+  @include phones {
+    margin-bottom: rem(3px);
+  }
+
 }
 
 .btn-more {
@@ -104,6 +110,88 @@
 
   &:hover {
     background-color: #1f2122;
+  }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#313534, 0.8);
+  display: none;
+  z-index: 100;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: rem(473px);
+  margin-left: rem(-236px);
+  padding: rem(30px) rem(20px);
+  background-color: #ffffff;
+  border-radius: rem(7px);
+  color: #2f3234;
+  display: none;
+  z-index: 110;
+  animation-name: modal-animation;
+  animation-duration: 0.9s;
+
+  @include phones {
+    left: 52%;
+    width: rem(450px);
+  }
+}
+
+@keyframes modal-animation {
+  0% {
+    top: rem(-3000px);
+  }
+  50% {
+    top: 65%;
+  }
+  100% {
+    top: 50%;
+  }
+
+}
+.modal-show {
+  display: block;
+}
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: $smoothly;
+  outline: none;
+  &:hover {
+    transform: scale(0.8);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: rem(23px);
+    right: rem(20px);
+    width: rem(20px);
+    height: rem(3px);
+    background-color: rgba(#e45028, 0.7);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }
 

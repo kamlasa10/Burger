@@ -58,6 +58,9 @@
     width: 104%;
   }
 }
+.delivery-row__left {
+  margin-right: rem(55px);
+}
 .delivery-form__contact {
   margin-bottom: rem(12px);
 }
@@ -185,7 +188,7 @@
     position: absolute;
     top: rem(6px);
     left: rem(1px);
-    background: url(../../img/check.png) no-repeat;
+    background: url(../img/check.png) no-repeat;
     background-size: cover;
     width: 11px;
     height: 9px;
@@ -195,6 +198,7 @@
 }
 .callback__checkbox {
   display: none;
+  cursor: pointer;
 
   &:checked + .callback__title::after {
     opacity: 1;

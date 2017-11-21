@@ -31,10 +31,10 @@
 }
 .team__title {
   color: #f9b43b;
-  margin-bottom: rem(77px);
+  margin-bottom: rem(65px);
 
   @include tablets {
-    margin-left: rem(55px);
+    margin-left: rem(200px);
     margin-bottom: rem(74px);
   }
 
@@ -72,11 +72,12 @@
   .accordeon__link {
     color: #f9b43b;
     &::before {
+      transition: $smoothly;
       transform: rotate(-180deg);
     }
   }
   .accordeon-row {
-    display: block;
+    display: flex;
   }
 
 }
@@ -101,6 +102,7 @@
   }
 
   &::before {
+    transition: $smoothly;
     content: "";
     position: absolute;
     top: rem(13px);

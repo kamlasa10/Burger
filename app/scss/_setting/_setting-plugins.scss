@@ -1,0 +1,53 @@
+// Slider slick
+.slick-slide {
+  width: 0;
+  float: none;
+  outline: none;
+}
+.slick-slide.container {
+  width: 100%;
+}
+.fp-controlArrow {
+  width: 25px;
+  height: 27px;
+  background: url("../img/arrow-scroll.svg") 50% no-repeat;
+  border: none;
+  border-width: 0;
+  transform: rotate(-90deg);
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.fp-controlArrow.fp-prev {
+  left: rem(-20px);
+  width: 25px;
+  height: 27px;
+  border: none;
+  transform: rotate(90deg);
+
+  @include tablets {
+    left: 15%;
+  }
+
+  @include phones {
+    left: 0;
+  }
+}
+.fp-controlArrow.fp-next {
+  top: 49%;
+  right: rem(-30px);
+
+  @include tablets {
+    right: 12%;
+  }
+
+  @include phones {
+    right: 0;
+  }
+}
