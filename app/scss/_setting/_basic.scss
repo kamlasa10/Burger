@@ -70,35 +70,7 @@ body {
 .big__heading {
   @include Big-title;
 }
-#menu li a{
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  width: rem(18px);
-  height: rem(18px);
-  border: 1px solid transparent;
-  border-radius: 50%;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: rem(5px);
-    left: rem(5px);
-    width: rem(6px);
-    height: rem(6px);
-    background-color: #ffffff;
-    border-radius: 50%;
-  }
-
-  &:hover {
-    border-color: #ffffff;
-  }
-}
-
-#menu li.active a {
-  border-color: #ffffff;
-
-}
 
 
 

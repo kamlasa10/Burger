@@ -14,6 +14,7 @@
   align-items: center;
 }
 .site-controls {
+  display: none;
   position: fixed;
   top: 20%;
   right: 23%;
@@ -123,33 +124,47 @@
       right: 0;
     }
   }
-  &--active::before {
-    display: none;
-  }
-  &--active {
-    right: rem(-15px);
-    transform: rotate(126deg);
-    display: block;
-    width: rem(28px);
-    opacity: 0.7;
-    transition: $smoothly;
-    z-index: 100;
-
-    &::after {
-      width: rem(28px);
-      bottom: rem(1px);
-      right: 0;
-      transform: rotate(-72deg);
-    }
-  }
-
   @include phones {
     top: rem(3px);
     margin-left: rem(30px);
   }
-
 }
+.burger-btn-close {
+  @include tablets {
+    position: absolute;
+    top: rem(75px);
+    right: rem(30px);
+    border: none;
+    background-color: transparent;
+    width: rem(30px);
+    cursor: pointer;
+    outline: none;
 
+    &:hover {
+      opacity: 0.7;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: rem(25px);
+      height: rem(2px);
+      background-color: rgba(#ffffff, 0.7);
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
 .promo {
   margin-top: rem(-15px);
   padding-left: rem(61px);

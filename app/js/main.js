@@ -6,6 +6,13 @@ $(function () {
 
     btnBurger.toggleClass('burger-menu-btn--active');
     overlay.toggleClass('overlay-show');
+
+    $('.burger-btn-close').on('click', () => {
+      let burgerClose = $('.burger-btn-close');
+      let burgerOverlay = $('.overlay');
+
+      burgerOverlay.removeClass('overlay-show');
+    });
   });
 });
 $(function () {
@@ -60,10 +67,13 @@ $(document).ready(function(){
 });
 // plugin one page scroll
 
+
 $(document).ready(function() {
   $('#fullpage').fullpage({
-    menu: '#menu',
-    anchors:['firstPage', 'SecondPage', '3rdpage','4rdpage', '5rdpage', '6rdpage', '7rdpage'],
+    anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage', '5rdPage', '6rdPage', '7rdPage'],
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips: ['First', 'Second', 'Third'],
     scrollingSpeed: 1200,
   });
 });
