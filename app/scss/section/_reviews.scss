@@ -73,6 +73,10 @@
   @include tablets {
     margin-bottom: 0;
   }
+
+  @include phones {
+    font-size: rem(13px);
+  }
 }
 .preview__desc {
   margin-bottom: rem(8px);
@@ -90,6 +94,8 @@
 
   @include phones {
     margin-bottom: rem(3px);
+    font-size: rem(13px);
+    line-height: rem(17px);
   }
 
 }

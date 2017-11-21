@@ -73,6 +73,9 @@
   width: 88px;
   height: 75px;
 }
+.features__text--correct {
+  margin-left: rem(30px);
+}
 .features__title {
   margin-bottom: rem(9px);
   font-family: $Lifehack-font;
@@ -85,3 +88,4 @@
     white-space: nowrap;
   }
 }
+

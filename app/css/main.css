@@ -749,10 +749,10 @@ body {
   right: -0.9375rem;
   transform: rotate(126deg);
   display: block;
-  z-index: 100;
   width: 1.75rem;
   opacity: 0.7;
   transition: all 0.4s;
+  z-index: 100;
 }
 
 .burger-menu-btn--active::after {
@@ -909,7 +909,7 @@ body {
   right: 0;
   left: 0;
   background-color: rgba(47, 50, 52, 0.98);
-  z-index: 90;
+  z-index: 80;
   display: none;
 }
 
@@ -1089,6 +1089,10 @@ body {
   height: 75px;
 }
 
+.features__text--correct {
+  margin-left: 1.875rem;
+}
+
 .features__title {
   margin-bottom: 0.5625rem;
   font-family: "Lifehack", Arial, sans-serif;
@@ -1179,7 +1183,7 @@ body {
   top: -5rem;
   left: 2.125rem;
   width: 5.625rem;
-  padding: 0.375rem 0;
+  padding: 0.375rem;
   padding-top: 0.6875rem;
   background-color: rgba(227, 80, 40, 0.4);
   border-radius: 0.375rem;
@@ -1306,20 +1310,20 @@ body {
 }
 
 .structure__icon-pic--sauce svg {
-  width: 41px;
-  height: 43px;
+  width: 2.5625rem;
+  height: 2.6875rem;
   fill: #e25028;
 }
 
 .structure__icon-pic--cucumber svg {
-  width: 43px;
-  height: 37px;
+  width: 2.6875rem;
+  height: 2.3125rem;
   fill: #8bc040;
 }
 
 .structure__icon-pic--cheese svg {
-  width: 39px;
-  height: 34px;
+  width: 2.4375rem;
+  height: 2.125rem;
   fill: #f8b43a;
 }
 
@@ -1449,7 +1453,7 @@ body {
 @media screen and (max-width: 480px) {
   .slide__title {
     margin-top: -0.3125rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     font-size: 2.5rem;
     line-height: 2.8125rem;
     font-weight: 400;
@@ -1468,7 +1472,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .slide__desc {
-    margin-bottom: 0.625rem;
+    margin-bottom: 0;
     padding: 0;
   }
 }
@@ -1977,6 +1981,12 @@ body {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .preview__title {
+    font-size: 0.8125rem;
+  }
+}
+
 .preview__desc {
   margin-bottom: 0.5rem;
   font-size: 0.875rem;
@@ -1997,6 +2007,8 @@ body {
 @media screen and (max-width: 480px) {
   .preview__desc {
     margin-bottom: 0.1875rem;
+    font-size: 0.8125rem;
+    line-height: 1.0625rem;
   }
 }
 

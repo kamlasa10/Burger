@@ -60,7 +60,7 @@
   top: rem(-80px);
   left: rem(34px);
   width: rem(90px);
-  padding: rem(6px) 0;
+  padding: rem(6px);
   padding-top: rem(11px);
   background-color: rgba(#e35028, 0.4);
   border-radius: rem(6px);
@@ -166,18 +166,18 @@
   fill: #8bc040;
 }
 .structure__icon-pic--sauce svg {
-  width: 41px;
-  height: 43px;
+  width: rem(41px);
+  height: rem(43px);
   fill: #e25028;
 }
 .structure__icon-pic--cucumber svg {
-  width: 43px;
-  height: 37px;
+  width: rem(43px);
+  height: rem(37px);
   fill: #8bc040;
 }
 .structure__icon-pic--cheese svg {
-  width: 39px;
-  height: 34px;
+  width: rem(39px);
+  height: rem(34px);
   fill: #f8b43a;
 }
 .structure__desc {
@@ -285,7 +285,7 @@
 
   @include phones {
     margin-top: rem(-5px);
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
     font-size: rem(40px);
     line-height: rem(45px);
     font-weight: 400;
@@ -299,7 +299,7 @@
   }
 
   @include phones {
-    margin-bottom: rem(0);
+    margin-bottom: 0;
     padding: 0;
   }
 }
