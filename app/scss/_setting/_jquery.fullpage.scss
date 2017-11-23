@@ -98,13 +98,14 @@ html.fp-enabled,
     top: 28%;
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
+    margin-top: -183px;
 
     @include tablets {
       display: none;
     }
 }
 #fp-nav.right {
-    right: 11%;
+    right: 19%;
 }
 #fp-nav.left {
     left: 17px;
