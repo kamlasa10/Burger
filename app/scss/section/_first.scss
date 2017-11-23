@@ -9,6 +9,17 @@
   background: #000000 url("../img/main-bg.jpg") no-repeat;
   background-size: cover;
 }
+.page-header {
+  transform: translateY(rem(-110px));
+
+  @include tablets {
+    transform: translateY(rem(-90px));
+  }
+
+  @include phones {
+    transform: translateY(rem(10px));
+  }
+}
 .page-header-row {
   justify-content: space-between;
   align-items: center;
@@ -28,18 +39,11 @@
   padding: 0;
   list-style-type: none;
 }
-.page-header {
-  position: relative;
-  top: rem(-130px);
 
-  @include tablets {
-    position: relative;
-    top: rem(-60px);
-  }
-}
 .page-header__logo {
   margin-right: auto;
 }
+
 .main-navigation {
   display: flex;
   margin-top: rem(-10px);
