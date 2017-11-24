@@ -2405,6 +2405,7 @@ body {
 }
 
 .footer {
+  z-index: 60;
   background: url(../img/footer-bg.png) no-repeat;
   background-size: cover;
   position: absolute;

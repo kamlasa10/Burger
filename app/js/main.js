@@ -88,33 +88,49 @@ $(function () {
   });
 });
 //map
-
-let icons = {
-  logo: {
-    icon: {
-      url: '../img/mp-marker.svg',
-      size: new google.maps.Size(40, 50),
-      scaledsize: new google.maps.Size(40, 50)
-    }
-  }
-};
-let features = [
-  {
-    position: new google.maps.LatLng(59.896134, 30.424618),
-    type: 'logo'
-  },
-  {
-  position: new google.maps.LatLng(59.896134, 30.424618),
-    type: 'logo'
-  }
-];
-features.forEach(function(feature) {
-  let marker = new google.maps.Marker({
-    position: feature.position,
-    icon: icons[feature.type].icon,
-    map: map
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: new google.maps.LatLng(59.896008, 30.424342),
+    mapTypeId: 'roadmap'
   });
-});
+
+  var icons = {
+    logo: {
+      icon: {
+        url: '../img/map-marker.svg',
+        size: new google.maps.Size(50, 60),
+        scaledsize: new google.maps.Size(50, 60)
+      }
+    }
+  };
+  var features = [
+    {
+      position: new google.maps.LatLng(59.897917, 30.420501),
+      type: 'logo'
+    },
+    {
+      position: new google.maps.LatLng(59.894742, 30.436731),
+      type: 'logo'
+    },
+    {
+      position: new google.maps.LatLng(59.893142, 30.419803),
+      type: 'logo'
+    },
+    {
+      position: new google.maps.LatLng(59.888228, 30.421493),
+      type: 'logo'
+    }
+  ];
+  features.forEach(function(feature) {
+    var marker = new google.maps.Marker({
+      position: feature.position,
+      icon: icons[feature.type].icon,
+      map: map
+    });
+  });
+
+}
 
 
 
