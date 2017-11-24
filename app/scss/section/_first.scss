@@ -10,11 +10,7 @@
   background-size: cover;
 }
 .page-header {
-  transform: translateY(rem(-110px));
-
-  @include tablets {
-    transform: translateY(rem(-90px));
-  }
+  transform: translateY(rem(-60px));
 
   @include phones {
     transform: translateY(rem(10px));

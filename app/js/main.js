@@ -78,6 +78,43 @@ $(document).ready(function() {
   });
 });
 
+$(function () {
+  $('.delivery-form').on('submit', (e) => {
+    e.preventDefault();
+
+    let form = $(e.target);
+    let data = form.serialize();
+    let url = form.attr('action');
+  });
+});
+//map
+
+let icons = {
+  logo: {
+    icon: {
+      url: '../img/mp-marker.svg',
+      size: new google.maps.Size(40, 50),
+      scaledsize: new google.maps.Size(40, 50)
+    }
+  }
+};
+let features = [
+  {
+    position: new google.maps.LatLng(59.896134, 30.424618),
+    type: 'logo'
+  },
+  {
+  position: new google.maps.LatLng(59.896134, 30.424618),
+    type: 'logo'
+  }
+];
+features.forEach(function(feature) {
+  let marker = new google.maps.Marker({
+    position: feature.position,
+    icon: icons[feature.type].icon,
+    map: map
+  });
+});
 
 
 

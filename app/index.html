@@ -873,23 +873,23 @@
         <div class="delivery__title big__heading">
           Закажите Доставку
         </div>
-        <form class="delivery-form" action="#">
+        <form class="delivery-form" action="order-form.php" method="post">
           <div class="row delivery-row">
             <div class="delivery-row__left">
               <div class="delivery-form__contact">
                 <div class="row layout-row">
                   <div class="layout-row__left">
                     <label class="delivery-form__title" for="name">Имя</label>
-                    <input class="delivery-form__input custom-input" type="text" id="name">
+                    <input class="delivery-form__input custom-input" type="text" id="name" name="user-name">
                   </div>
                   <div class="layout-row__right">
                     <label class="delivery-form__title" for="tel">Телефон</label>
-                    <input class="delivery-form__input custom-input" type="tel" id="tel">
+                    <input class="delivery-form__input custom-input" type="tel" id="tel" name="user-phone">
                   </div>
                 </div>
               </div>
               <label class="delivery-form__title" for="street">Улица</label>
-              <input class="delivery-form__input delivery-form__input--w100 custom-input" type="text" id="street">
+              <input class="delivery-form__input delivery-form__input--w100 custom-input" type="text" id="street" name="user-adress">
               <div class="delivery-form__adress">
                 <div class="row layout-row">
                   <div class="layout-row__item">
@@ -914,22 +914,22 @@
             <div class="delivery-row__right">
               <div class="delivery-form__wishes">
                 <label class="delivery-form__title" for="wishes">Коментарий</label>
-                <textarea class="delivery-form__area custom-input" name="area" id="wishes"></textarea>
+                <textarea class="delivery-form__area custom-input" id="wishes" name="user-comment"></textarea>
               </div>
               <div class="delivery-form__choise choise">
                 <div class="row choise-row">
                   <div class="choise-row__left">
-                    <input class="choise__radio" type="radio" name="way" id="choise__radio1">
+                    <input class="choise__radio" type="radio" name="pay" id="choise__radio1">
                     <label class="choise__title" for="choise__radio1">Потребуеться сдача</label>
                   </div>
                   <div class="choise-row__right">
-                    <input class="choise__radio" type="radio" name="way" checked id="choise__radio2">
+                    <input class="choise__radio" type="radio" name="pay" checked id="choise__radio2">
                     <label class="choise__title" for="choise__radio2">Оплата по карте</label>
                   </div>
                 </div>
               </div>
               <div class="delivery-form__callback callback">
-                <input class="callback__checkbox" type="checkbox" id="callback__checkbox1" checked>
+                <input class="callback__checkbox" type="checkbox" id="callback__checkbox1" checked name="callback" value="1">
                 <label class="delivery-form__title callback__title" for="callback__checkbox1">Не перезванивать</label>
               </div>
               <div class="delivery-form__order order">
@@ -943,7 +943,8 @@
         </form>
       </div>
     </section>
-    <section class= "section map">
+    <section class= "section maps" id="map">
+      <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16011.833343436685!2d30.4234574984288!3d59.890995706374255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fccc4c0512b%3A0xad34528f97d3c3e8!2z0YPQuy4g0JHQsNCx0YPRiNC60LjQvdCwLCAxMiwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkyMDI5!5e0!3m2!1sru!2shk!4v1511532297878" width="600" height="450"></iframe>
       <footer class="footer">
         <div class="container">
           <div class="row footer-row">
@@ -1070,6 +1071,12 @@
       а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять,
       невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
     </div>
+  </div>
+  <div class="order-message">
+    <div class="order-message__desc">
+      Сообщение отправлено
+    </div>
+    <div class="order-message-btn btn">Закрыть</div>
   </div>
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/slick.min.js"></script>

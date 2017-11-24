@@ -216,4 +216,26 @@
   margin-left: rem(15px);
   color: #ffffff;
 }
+.order-message {
+  display: none;
+  position: fixed;
+  bottom: 49%;
+  left: 45%;
+  width: rem(196px);
+  padding: rem(20px);
+  padding-right: rem(15px);
+  color: #2f3234;
+  background-color: #ffffff;
+  box-shadow: 0 0 40px rgba(0, 0, 1, 0.5);
+  border-radius: rem(5px);
+}
+.order-message__desc {
+  margin-bottom: rem(17px);
+}
+.order-message-btn {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
 
