@@ -45,13 +45,7 @@
 .menu-accordeon__item {
   height: 100%;
 }
-.menu-accordeon__item--open .menu-accordeon__right {
-  transition: $smoothly;
-  width: rem(550px);
-  padding: rem(63px) rem(35px);
-  opacity: 1;
 
-}
 .menu-accordeon__link {
   position: relative;
   display: block;
@@ -75,6 +69,19 @@
     background-size: cover;
   }
 }
+
+.menu-accordeon__item--open .menu-accordeon__right {
+  transition: $smoothly;
+  width: rem(550px);
+  padding: rem(63px) rem(35px);
+  opacity: 1;
+
+  @include phones {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
 .menu-accordeon__text {
   position: absolute;
   top: 50%;
@@ -95,11 +102,36 @@
 .menu-accordeon-row {
   height: 100%;
 }
+
 .menu-accordeon__right {
   width: 0;
   opacity: 0;
   background-color: rgba(#2f3234, 0.93);
-
+}
+.modal-accordeon {
+  @include phones {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+}
+.menu-accordeon__right--modal-text {
+  @include phones {
+    opacity: 1;
+    width: 85%;
+    height: 100%;
+    padding: rem(63px) rem(35px);
+    padding-right: rem(50px);
+  }
+}
+.burger-btn-close--modal-acco {
+  display: none;
+  @include phones {
+    display: block;
+    top: rem(40px);
+    right: rem(20px);
+  }
 }
 
 

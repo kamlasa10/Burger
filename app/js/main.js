@@ -54,6 +54,16 @@ $(function () {
     item.toggleClass('menu-accordeon__item--open').siblings().removeClass('menu-accordeon__item--open');
   });
 });
+$(function () {
+  $('.menu-accordeon__link').on('click', () => {
+    let modalAcco = $('.modal-accordeon');
+    modalAcco.toggleClass('modal-show');
+  });
+  $('.burger-btn-close--modal-acco').on('click', () => {
+    let modalAcco = $('.modal-accordeon');
+    modalAcco.removeClass('modal-show');
+  });
+});
 
 // plugin slick carousel
 
@@ -78,15 +88,6 @@ $(document).ready(function() {
   });
 });
 
-$(function () {
-  $('.delivery-form').on('submit', (e) => {
-    e.preventDefault();
-
-    let form = $(e.target);
-    let data = form.serialize();
-    let url = form.attr('action');
-  });
-});
 //map
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -129,7 +130,6 @@ function initMap() {
       map: map
     });
   });
-
 }
 
 
